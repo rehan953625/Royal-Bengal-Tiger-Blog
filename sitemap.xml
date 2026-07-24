@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://royalbengaltigerindia.com/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Main Hero Image -->
+    <image:image>
+      <image:loc>https://royalbengaltigerindia.com/images/royal_bengal_tiger_india_forest_two_cubs_golden_light.webp</image:loc>
+      <image:title>Royal Bengal Tiger India Forest Two Cubs</image:title>
+      <image:caption>Royal bengal tiger india forest with two cubs in golden light</image:caption>
+    </image:image>
+
+    <!-- Close-up Image -->
+    <image:image>
+      <image:loc>https://royalbengaltigerindia.com/images/royal_bengal_tiger_closeup.webp</image:loc>
+      <image:title>Royal Bengal Tiger Close Up</image:title>
+      <image:caption>Royal bengal tiger india close up showing vibrissae and powerful canines</image:caption>
+    </image:image>
+
+    <!-- Forest Habitat Image -->
+    <image:image>
+      <image:loc>https://royalbengaltigerindia.com/images/royal_bengal_tiger_forest_habitat_lossless.webp</image:loc>
+      <image:title>Royal Bengal Tiger Forest Habitat</image:title>
+      <image:caption>Royal bengal tiger india forest habitat in central indian landscape</image:caption>
+    </image:image>
+
+    <!-- Safari Track Image -->
+    <image:image>
+      <image:loc>https://royalbengaltigerindia.com/images/royal_bengal_tiger_safari_track.webp</image:loc>
+      <image:title>Royal Bengal Tiger Safari Track</image:title>
+      <image:caption>Royal bengal tiger india national animal forest wildlife on a safari track</image:caption>
+    </image:image>
+  </url>
+</urlset>
