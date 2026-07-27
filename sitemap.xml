@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        
+  <!-- Home Page -->
   <url>
     <loc>https://royalbengaltigerindia.com/</loc>
     <lastmod>2026-07-25</lastmod>
@@ -35,4 +37,13 @@
       <image:caption>Royal bengal tiger india national animal forest wildlife on a safari track</image:caption>
     </image:image>
   </url>
+
+  <!-- NAYA PAGE: Safari Booking -->
+  <url>
+    <loc>https://royalbengaltigerindia.com/corbett-safari-booking</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
