@@ -260,6 +260,14 @@
       vertical-align: -0.125em;
       flex-shrink: 0;
     }
+    .mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--gold);
+    font-size: 1.5rem;
+    cursor: pointer;
+   }
 
     /* ─── NAVBAR ─────────────────────────────────── */
     .nav {
@@ -1034,11 +1042,26 @@
       .footer-inner { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 600px) {
-      .nav-links { display: none; }
-      .hero h1 { font-size: 2.6rem; }
-      .footer-inner { grid-template-columns: 1fr; }
-      .booking-card { padding: 24px 18px; }
-    }
+  .mobile-menu-btn { display: block; }
+  .nav-links { 
+    display: none; /* Default hidden */
+    flex-direction: column; 
+    position: absolute; 
+    top: 68px; 
+    left: 0; 
+    right: 0; 
+    background: var(--forest); 
+    padding: 20px; 
+    text-align: center;
+    border-bottom: 2px solid var(--gold);
+  }
+  .nav-links.active {
+    display: flex; /* Button click hone par show hoga */
+  }
+  .hero h1 { font-size: 2.6rem; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .booking-card { padding: 24px 18px; }
+}
   </style>
 </head>
 <body>
@@ -1147,6 +1170,9 @@
     <a href="#guide">Travel Guide</a>
     <a href="#booking" class="nav-cta">Book Safari</a>
   </div>
+  <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">
+  <svg class="icon"><use href="#icon-chevron-down"></use></svg>
+</button>
 </nav>
 
 <!-- HERO -->
@@ -1881,11 +1907,11 @@
       <div class="footer-brand-name">ROYAL BENGAL <span>TIGER INDIA</span></div>
       <p class="footer-brand-desc">Official permit booking partner for Jim Corbett National Park. Licensed by the Uttarakhand Forest Department for the 2026-27 season.</p>
       <div class="footer-social">
-        <a href="#"><svg class="icon"><use href="#icon-facebook"></use></svg></a>
-        <a href="#"><svg class="icon"><use href="#icon-instagram"></use></svg></a>
-        <a href="#"><svg class="icon"><use href="#icon-whatsapp"></use></svg></a>
-        <a href="#"><svg class="icon"><use href="#icon-youtube"></use></svg></a>
-      </div>
+      <a href="https://share.google/priZSkZn4fP5aARlr" aria-label="Visit our Facebook page" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#icon-facebook"></use></svg></a>
+      <a href="https://share.google/5AsRws2PbGNcO3jig" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#icon-instagram"></use></svg></a>
+      <a href="https://wa.me/919536256640" aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#icon-whatsapp"></use></svg></a>
+      <a href="https://www.youtube.com/@asifali777" aria-label="Subscribe to our YouTube channel" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#icon-youtube"></use></svg></a>
+    </div>
     </div>
     <div class="footer-col">
       <h4>Safari Zones</h4>
@@ -1939,29 +1965,37 @@
 
   /* Booking → WhatsApp */
   function handleBooking() {
-    const type  = document.getElementById('type').value;
-    const zone  = document.getElementById('zone').value;
-    const shift = document.getElementById('shift').value;
-    const date  = document.getElementById('date').value || 'Not specified';
-    const pax   = document.getElementById('guests').value || 'Not specified';
-    const phone = '919536256640';
-    const msg   = encodeURIComponent(
-      `*New Safari Booking Enquiry 2026-27*\n` +
-      `Safari Type: ${type}\n` +
-      `Zone: ${zone}\n` +
-      `Shift: ${shift}\n` +
-      `Travel Date: ${date}\n` +
-      `No. of Guests: ${pax}`
-    );
-    showToast();
-    setTimeout(() => window.open(`https://wa.me/${phone}?text=${msg}`, '_blank'), 900);
+  const type  = document.getElementById('type').value;
+  const zone  = document.getElementById('zone').value;
+  const shift = document.getElementById('shift').value;
+  const date  = document.getElementById('date').value;
+  const pax   = document.getElementById('guests').value;
+
+  // Validation Check: Agar date ya guests khali hain toh alert do
+  if (!date || !pax) {
+    alert("Please select a travel date and enter the number of guests before checking availability.");
+    return; // Form yahin ruk jayega, WhatsApp par redirect nahi hoga
   }
 
-  function openWhatsApp(e) {
-    e.preventDefault();
-    const phone = '919536256640';
-    window.open(`https://wa.me/${phone}?text=${encodeURIComponent('Hello! I want to enquire about Jim Corbett Safari Booking 2026-27.')}`, '_blank');
+  const phone = '919536256640';
+  const msg   = encodeURIComponent(
+    `*New Safari Booking Enquiry 2026-27*\n` +
+    `Safari Type: ${type}\n` +
+    `Zone: ${zone}\n` +
+    `Shift: ${shift}\n` +
+    `Travel Date: ${date}\n` +
+    `No. of Guests: ${pax}`
+  );
+  showToast();
+  setTimeout(() => window.open(`https://wa.me/${phone}?text=${msg}`, '_blank'), 900);
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const dateInput = document.getElementById('date');
+  if(dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
   }
+});
 
   /* Toast */
   function showToast() {
@@ -1977,6 +2011,15 @@
       ? 'rgba(15,28,16,.97)'
       : 'rgba(15,28,16,.92)';
   });
+  function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}
+function openWhatsApp(e) {
+    e.preventDefault();
+    const phone = '919536256640';
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent('Hello! I want to enquire about Jim Corbett Safari Booking 2026-27.')}`, '_blank');
+  }
 </script>
 </body>
 </html>
