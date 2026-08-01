@@ -2075,6 +2075,21 @@ function openWhatsApp(e) {
     const phone = '919536256640';
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent('Hello! I want to enquire about Jim Corbett Safari Booking 2026-27.')}`, '_blank');
   }
+  document.addEventListener("DOMContentLoaded", function() {
+    const lazySlides = document.querySelectorAll('.hero-slideshow .slide img[data-src]');
+    let currentIndex = 0;
+
+    const imageLoader = setInterval(() => {
+      if (currentIndex < lazySlides.length) {
+        const img = lazySlides[currentIndex];
+        img.src = img.getAttribute('data-src');
+        img.removeAttribute('data-src');
+        currentIndex++;
+      } else {
+        clearInterval(imageLoader);
+      }
+    }, 4500); 
+  });
 </script>
 </body>
 </html>
