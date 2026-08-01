@@ -582,12 +582,33 @@
       cursor: pointer;
       box-shadow: var(--shadow);
     }
-    .zone-card img {
+    .zone-slideshow {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      transition: transform 0.7s ease; /* Hover effect ke liye */
+    }
+    .zone-card:hover .zone-slideshow {
+      transform: scale(1.1); /* Card par mouse le jane par smooth zoom */
+    }
+    .zone-slideshow img {
+      position: absolute; inset: 0;
       width: 100%; height: 100%;
       object-fit: cover;
-      transition: transform .7s ease;
+      opacity: 0;
+      animation: zoneFade 12s infinite; /* 3 images (4 sec each) = 12s cycle */
     }
-    .zone-card:hover img { transform: scale(1.1); }
+    
+    .z-slide-1 { animation-delay: 0s; }
+    .z-slide-2 { animation-delay: 4s; }
+    .z-slide-3 { animation-delay: 8s; }
+
+    @keyframes zoneFade {
+      0%   { opacity: 0; }
+      8%   { opacity: 1; } /* Smooth fade in */
+      33%  { opacity: 1; } /* Image dikhti rahegi */
+      41%  { opacity: 0; } /* Smooth fade out */
+      100% { opacity: 0; }
+    }
     .zone-overlay {
       position: absolute; inset: 0;
       background: linear-gradient(to top, rgba(10,22,11,.92) 0%, rgba(10,22,11,.15) 55%, transparent 100%);
@@ -1336,8 +1357,13 @@
     <p class="section-lead">Each zone in Jim Corbett offers a dramatically different landscape — from dense sal forests to open grasslands along the Ramganga river.</p>
     <div class="zones-grid">
 
+      <!-- CARD 1: Dhikala -->
       <div class="zone-card">
-        <img src="/assets/images/zone-dhikala.webp" alt="Dhikala Zone, Jim Corbett National Park" width="900" height="1000" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+        <div class="zone-slideshow">
+          <img class="z-slide-1" src="/animation/corbett park view.webp" alt="Dhikala 1" loading="lazy">
+          <img class="z-slide-2" src="/animation/corbett cantor safari.webp" alt="Dhikala 2" loading="lazy">
+          <img class="z-slide-3" src="/animation/corbett tiger safari.webp" alt="Dhikala 3" loading="lazy">
+        </div>
         <div class="zone-overlay">
           <div class="zone-badge">Tiger Hub — Core Zone</div>
           <div class="zone-name">Dhikala</div>
@@ -1351,8 +1377,13 @@
         </div>
       </div>
 
+      <!-- CARD 2: Bijrani -->
       <div class="zone-card">
-        <img src="/assets/images/zone-bijrani.webp" alt="Bijrani Zone, Jim Corbett National Park" width="900" height="1000" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+        <div class="zone-slideshow">
+          <img class="z-slide-1" src="/animation/corbett jeep safari.webp" alt="Bijrani 1" loading="lazy">
+          <img class="z-slide-2" src="/animation/corbett park safari booking.webp" alt="Bijrani 2" loading="lazy">
+          <img class="z-slide-3" src="/animation/corbett tiger cantor safari.webp" alt="Bijrani 3" loading="lazy">
+        </div>
         <div class="zone-overlay">
           <div class="zone-badge">Bestseller</div>
           <div class="zone-name">Bijrani</div>
@@ -1366,8 +1397,13 @@
         </div>
       </div>
 
+      <!-- CARD 3: Jhirna & Dhela -->
       <div class="zone-card">
-        <img src="/assets/images/zone-jhirna-dhela.webp" alt="Jhirna and Dhela Zones, Jim Corbett National Park" width="900" height="1000" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+        <div class="zone-slideshow">
+          <img class="z-slide-1" src="/animation/book elephant safari.webp" alt="Jhirna 1" loading="lazy">
+          <img class="z-slide-2" src="/animation/elephant in corbett park.webp" alt="Jhirna 2" loading="lazy">
+          <img class="z-slide-3" src="/animation/cotbett elephant photo.webp" alt="Jhirna 3" loading="lazy">
+        </div>
         <div class="zone-overlay">
           <div class="zone-badge">Open Year-Round</div>
           <div class="zone-name">Jhirna & Dhela</div>
@@ -1381,8 +1417,13 @@
         </div>
       </div>
 
+      <!-- CARD 4: Phato / Garjiya -->
       <div class="zone-card">
-        <img src="/assets/images/zone-phato-garjiya.webp" alt="Phato and Garjiya Zones, Jim Corbett National Park" width="900" height="1000" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+        <div class="zone-slideshow">
+          <img class="z-slide-1" src="/animation/corbett elephant safari booking.webp" alt="Phato 1" loading="lazy">
+          <img class="z-slide-2" src="/animation/corbett park view.webp" alt="Phato 2" loading="lazy">
+          <img class="z-slide-3" src="/animation/corbett jeep safari.webp" alt="Phato 3" loading="lazy">
+        </div>
         <div class="zone-overlay">
           <div class="zone-badge">New Zone 2026</div>
           <div class="zone-name">Phato / Garjiya</div>
@@ -1395,7 +1436,6 @@
           <div class="zone-more">Book Phato / Garjiya <svg class="icon"><use href="#icon-arrow-right"></use></svg></div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
