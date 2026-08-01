@@ -1226,31 +1226,31 @@
       <img src="/animation/corbett tiger safari.webp" alt="Corbett Tiger Safari" fetchpriority="high">
     </div>
     <div class="slide slide-2">
-      <img data-src="/animation/corbett jeep safari.webp" alt="Corbett Jeep Safari" decoding="async">
+      <img src="/animation/corbett jeep safari.webp" alt="Corbett Jeep Safari" loading="eager" decoding="async">
     </div>
     <div class="slide slide-3">
-      <img data-src="/animation/corbett cantor safari.webp" alt="Corbett Canter Safari" decoding="async">
+      <img src="/animation/corbett cantor safari.webp" alt="Corbett Canter Safari" loading="eager" decoding="async">
     </div>
     <div class="slide slide-4">
-      <img data-src="/animation/corbett elephant safari booking.webp" alt="Elephant Safari Booking" decoding="async">
+      <img src="/animation/corbett elephant safari booking.webp" alt="Elephant Safari Booking" loading="eager" decoding="async">
     </div>
     <div class="slide slide-5">
-      <img data-src="/animation/corbett park view.webp" alt="Corbett Park View" decoding="async">
+      <img src="/animation/corbett park view.webp" alt="Corbett Park View" loading="eager" decoding="async">
     </div>
     <div class="slide slide-6">
-      <img data-src="/animation/corbett tiger cantor safari.webp" alt="Tiger Canter Safari" decoding="async">
+      <img src="/animation/corbett tiger cantor safari.webp" alt="Tiger Canter Safari" loading="eager" decoding="async">
     </div>
     <div class="slide slide-7">
-      <img data-src="/animation/cotbett elephant photo.webp" alt="Elephant Photo" decoding="async">
+      <img src="/animation/corbett elephant photo.webp" alt="Elephant Photo" loading="eager" decoding="async">
     </div>
     <div class="slide slide-8">
-      <img data-src="/animation/elephant in corbett park.webp" alt="Elephant in Corbett" decoding="async">
+      <img src="/animation/elephant in corbett park.webp" alt="Elephant in Corbett" loading="eager" decoding="async">
     </div>
     <div class="slide slide-9">
-      <img data-src="/animation/corbett park safari booking.webp" alt="Park Safari Booking" decoding="async">
+      <img src="/animation/corbett park safari booking.webp" alt="Park Safari Booking" loading="eager" decoding="async">
     </div>
     <div class="slide slide-10">
-      <img data-src="/animation/book elephant safari.webp" alt="Book Elephant Safari" decoding="async">
+      <img src="/animation/book elephant safari.webp" alt="Book Elephant Safari" loading="eager" decoding="async">
     </div>
   </div>
   <div class="hero-content">
@@ -2114,21 +2114,7 @@ function openWhatsApp(e) {
     const phone = '919536256640';
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent('Hello! I want to enquire about Jim Corbett Safari Booking 2026-27.')}`, '_blank');
   }
-  document.addEventListener("DOMContentLoaded", function() {
-    const lazySlides = document.querySelectorAll('.hero-slideshow .slide img[data-src]');
-    let currentIndex = 0;
 
-    const imageLoader = setInterval(() => {
-      if (currentIndex < lazySlides.length) {
-        const img = lazySlides[currentIndex];
-        img.src = img.getAttribute('data-src');
-        img.removeAttribute('data-src');
-        currentIndex++;
-      } else {
-        clearInterval(imageLoader);
-      }
-    }, 4500); 
-  });
 </script>
 </body>
 </html>
