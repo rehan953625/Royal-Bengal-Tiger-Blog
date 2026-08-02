@@ -8,13 +8,6 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-        
-<!-- Main Hero Image -->
-    <image:image>
-      <image:loc>https://royalbengaltigerindia.com/images/royal_bengal_tiger_india_forest.webp</image:loc>
-      <image:title>Royal Bengal Tiger India Forest Two Cubs</image:title>
-      <image:caption>Royal bengal tiger india forest with two cubs in golden light</image:caption>
-    </image:image>
 
   <!-- Main Safari Booking Page -->
   <url>
