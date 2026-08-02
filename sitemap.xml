@@ -1,55 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         
   <!-- Home Page -->
   <url>
     <loc>https://royalbengaltigerindia.com/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    
-    <!-- Main Hero Image -->
-    <image:image>
-      <image:loc>https://royalbengaltigerindia.com/images/royal_bengal_tiger_india_forest_two_cubs_golden_light.webp</image:loc>
-      <image:title>Royal Bengal Tiger India Forest Two Cubs</image:title>
-      <image:caption>Royal bengal tiger india forest with two cubs in golden light</image:caption>
-    </image:image>
-
-    <!-- Close-up Image -->
-    <image:image>
-      <image:loc>https://royalbengaltigerindia.com/images/royal_bengal_tiger_closeup.webp</image:loc>
-      <image:title>Royal Bengal Tiger Close Up</image:title>
-      <image:caption>Royal bengal tiger india close up showing vibrissae and powerful canines</image:caption>
-    </image:image>
-
-    <!-- Forest Habitat Image -->
-    <image:image>
-      <image:loc>https://royalbengaltigerindia.com/images/royal_bengal_tiger_forest_habitat_lossless.webp</image:loc>
-      <image:title>Royal Bengal Tiger Forest Habitat</image:title>
-      <image:caption>Royal bengal tiger india forest habitat in central indian landscape</image:caption>
-    </image:image>
-
-    <!-- Safari Track Image -->
-    <image:image>
-      <image:loc>https://royalbengaltigerindia.com/images/royal_bengal_tiger_safari_track.webp</image:loc>
-      <image:title>Royal Bengal Tiger Safari Track</image:title>
-      <image:caption>Royal bengal tiger india national animal forest wildlife on a safari track</image:caption>
-    </image:image>
   </url>
 
   <!-- Main Safari Booking Page -->
   <url>
     <loc>https://royalbengaltigerindia.com/Corbett-tiger-safari-booking-india.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <!-- Jim Corbett National Park Guide -->
+  <url>
+    <loc>https://royalbengaltigerindia.com/jim-corbett-national-park-guide.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Jim Corbett Safari Booking Guide -->
+  <url>
+    <loc>https://royalbengaltigerindia.com/jim-corbett-safari-booking-guide.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Luxury Safari Page -->
   <url>
     <loc>https://royalbengaltigerindia.com/luxury-jim-corbett-safari.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -57,7 +44,7 @@
   <!-- Tiger Facts Page -->
   <url>
     <loc>https://royalbengaltigerindia.com/royal-bengal-tiger-facts.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -65,7 +52,7 @@
   <!-- Additional Safari Booking Page -->
   <url>
     <loc>https://royalbengaltigerindia.com/corbett=safari-booking.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
