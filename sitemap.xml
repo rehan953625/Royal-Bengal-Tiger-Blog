@@ -1,60 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-        
-  <!-- Home Page -->
+
+  <!-- Main site — booking landing page and its direct support pages -->
   <url>
-    <loc>https://royalbengaltigerindia.com/</loc>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://www.royalbengaltigerindia.com/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Main Safari Booking Page -->
   <url>
-    <loc>https://royalbengaltigerindia.com/Corbett-tiger-safari-booking-india.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://www.royalbengaltigerindia.com/luxury-jim-corbett-safari-package.html</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Jim Corbett National Park Guide -->
   <url>
-    <loc>https://royalbengaltigerindia.com/jim-corbett-national-park-guide.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://www.royalbengaltigerindia.com/all-about-jim-corbett-national-park.html</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Jim Corbett Safari Booking Guide -->
   <url>
-    <loc>https://royalbengaltigerindia.com/jim-corbett-safari-booking-guide.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://www.royalbengaltigerindia.com/about.html</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.royalbengaltigerindia.com/privacy-policy.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.royalbengaltigerindia.com/terms-conditions.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
-  <!-- Luxury Safari Page -->
+  <!-- Tiger ecology & facts guides -->
   <url>
-    <loc>https://royalbengaltigerindia.com/luxury-jim-corbett-safari.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://royalbengaltigerindia.com/royal-bengal-tiger-india</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-
-  <!-- Tiger Facts Page -->
   <url>
-    <loc>https://royalbengaltigerindia.com/royal-bengal-tiger-facts.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://royalbengaltigerindia.com/royal-bengal-tiger-facts</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Additional Safari Booking Page -->
+  <!-- Park & booking guides -->
   <url>
-    <loc>https://royalbengaltigerindia.com/corbett=safari-booking.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://royalbengaltigerindia.com/jim-corbett-national-park-guide</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://royalbengaltigerindia.com/jim-corbett-safari-booking-guide</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.royalbengaltigerindia.com/luxury-jim-corbett-safari.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
