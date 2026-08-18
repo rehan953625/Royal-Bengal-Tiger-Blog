@@ -1220,6 +1220,30 @@
       transform: translate(-50%, -50%) scale(1.08);
       background: rgba(10,22,11,.75);
     }
+    /* Desktop Safari Booking Form Buttons Fix */
+@media (min-width: 900px) {
+  /* Button group ko 2 columns ki width dena */
+  .booking-grid .field-group:last-child {
+    grid-column: span 2;
+    flex-direction: row; /* Buttons ko side-by-side lana */
+    gap: 16px;
+  }
+
+  /* Khali space wale label ko chhupana taaki grid alignment perfectly base par match kare */
+  .booking-grid .field-group:last-child label {
+    display: none;
+  }
+
+  /* Buttons ki formatting aur alignment theek karna */
+  .booking-grid .field-group:last-child .btn-book {
+    margin-top: 0 !important; /* WhatsApp button ke inline margin ko override karne ke liye */
+    flex: 1; /* Dono buttons ko ek jaisi width dene ke liye */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 15px; /* Padding thodi adjust ki hai */
+  }
+}
   </style>
 </head>
 <body>
