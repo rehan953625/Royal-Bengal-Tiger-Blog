@@ -153,165 +153,28 @@
   }
   </script>
 
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K8DXZ8ND');</script>
+
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="preconnect" href="https://bat.bing.net" crossorigin />
+  <link rel="dns-prefetch" href="https://www.youtube.com" />
+  <link rel="stylesheet" href="/assets/css/common.css" />
+  <script src="/assets/js/common.js" defer></script>
+  <script src="/assets/js/booking.js" defer></script>
   <style>
-    /* ─── SELF-HOSTED FONTS (replaces Google Fonts CDN) ───────────
-       Files referenced below are not included in this HTML file.
-       Download the same open-source families from Google Fonts
-       (SIL Open Font License — free to self-host) and place the
-       .woff2 files at these exact paths. See the notes shared
-       alongside this file for the two-command way to do this. ── */
-    @font-face {
-      font-family: 'Cormorant Garamond';
-      font-style: normal; font-weight: 400;
-      font-display: swap;
-      src: url('/assets/fonts/cormorant-garamond-v20-latin-400.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'Cormorant Garamond';
-      font-style: normal; font-weight: 600;
-      font-display: swap;
-      src: url('/assets/fonts/cormorant-garamond-v20-latin-600.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'Cormorant Garamond';
-      font-style: normal; font-weight: 700;
-      font-display: swap;
-      src: url('/assets/fonts/cormorant-garamond-v20-latin-700.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'Cormorant Garamond';
-      font-style: italic; font-weight: 400;
-      font-display: swap;
-      src: url('/assets/fonts/cormorant-garamond-v20-latin-400italic.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'DM Sans';
-      font-style: normal; font-weight: 300;
-      font-display: swap;
-      src: url('/assets/fonts/dm-sans-v14-latin-300.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'DM Sans';
-      font-style: normal; font-weight: 400;
-      font-display: swap;
-      src: url('/assets/fonts/dm-sans-v14-latin-regular.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'DM Sans';
-      font-style: normal; font-weight: 500;
-      font-display: swap;
-      src: url('/assets/fonts/dm-sans-v14-latin-500.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'DM Sans';
-      font-style: normal; font-weight: 600;
-      font-display: swap;
-      src: url('/assets/fonts/dm-sans-v14-latin-600.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'DM Mono';
-      font-style: normal; font-weight: 400;
-      font-display: swap;
-      src: url('/assets/fonts/dm-mono-v13-latin-regular.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'DM Mono';
-      font-style: normal; font-weight: 500;
-      font-display: swap;
-      src: url('/assets/fonts/dm-mono-v13-latin-500.woff2') format('woff2');
-    }
-
-    /* ─── TOKENS ─────────────────────────────────── */
-    :root {
-      --ink:     #0F1C10;
-      --forest:  #1A3320;
-      --moss:    #2D5A3D;
-      --sage:    #6A9A7A;
-      --amber:   #B07415;
-      --gold:    #E8B84B;
-      --cream:   #F5F0E8;
-      --paper:   #FAF8F4;
-      --smoke:   #E8E4DC;
-      --white:   #FFFFFF;
-
-      --serif:   'Cormorant Garamond', Georgia, serif;
-      --sans:    'DM Sans', system-ui, sans-serif;
-      --mono:    'DM Mono', monospace;
-
-      --r-sm: 6px;
-      --r-md: 12px;
-      --r-lg: 20px;
-      --shadow: 0 8px 40px rgba(15,28,16,.15);
-    }
-
-    /* ─── RESET ──────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { 
-      max-width: 100%; 
-      overflow-x: hidden; 
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--sans);
-      background: var(--paper);
-      color: var(--ink);
-    }
-    img { display: block; max-width: 100%; }
-    a { text-decoration: none; color: inherit; }
-    .icon {
-      width: 1em; height: 1em;
-      display: inline-block;
-      vertical-align: -0.125em;
-      flex-shrink: 0;
-    }
-    .mobile-menu-btn {
-    display: none;
-    background: transparent;
-    border: none;
-    color: var(--gold);
-    font-size: 1.5rem;
-    cursor: pointer;
-   }
-
-    /* ─── NAVBAR ─────────────────────────────────── */
     .nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 40px;
-      height: 68px;
       background: rgba(15,28,16,.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(232,184,75,.2);
-      transition: background .3s;
     }
-    .nav-logo {
-      font-family: var(--serif);
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: .03em;
+    .nav-links {
+      gap: 32px;
     }
-    .nav-logo span { color: var(--gold); }
-    .nav-links { display: flex; align-items: center; gap: 32px; }
     .nav-links a {
-      font-size: .8rem;
-      font-weight: 500;
       letter-spacing: .08em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.75);
-      transition: color .2s;
     }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-cta {
-      background: var(--gold);
-      color: var(--forest) !important;
-      padding: 9px 22px;
-      border-radius: var(--r-sm);
-      font-weight: 600 !important;
-    }
-    .nav-cta:hover { background: var(--amber); color: #fff !important; }
-
-    /* ─── HERO ───────────────────────────────────── */
     .hero {
       position: relative;
       height: 100vh;
@@ -325,18 +188,21 @@
       color: var(--white);
     }
     .hero-slideshow {
-      position: absolute; inset: 0;
+      position: absolute;
+      inset: 0;
       background-color: var(--forest);
       overflow: hidden;
     }
     .hero-slideshow::after {
       content: '';
-      position: absolute; inset: 0;
+      position: absolute;
+      inset: 0;
       background-image: linear-gradient(to bottom, rgba(10,22,11,.45) 0%, rgba(10,22,11,.7) 100%);
       z-index: 1;
     }
     .hero-slideshow .slide {
-      position: absolute; inset: 0;
+      position: absolute;
+      inset: 0;
       opacity: 0;
       transform: scale(1);
       transition: opacity 1.6s ease, transform 7s ease-out;
@@ -346,16 +212,21 @@
       transform: scale(1.06);
     }
     .hero-slideshow .slide img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center 30%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
     }
     .hero-content {
-      position: relative; z-index: 2;
+      position: relative;
+      z-index: 2;
       max-width: 820px;
       padding: 0 24px;
     }
     .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       font-family: var(--mono);
       font-size: .72rem;
       letter-spacing: .2em;
@@ -363,10 +234,10 @@
       color: var(--gold);
       margin-bottom: 22px;
     }
-    .hero-eyebrow::before,
-    .hero-eyebrow::after {
+    .hero-eyebrow::before, .hero-eyebrow::after {
       content: '';
-      width: 40px; height: 1px;
+      width: 40px;
+      height: 1px;
       background: var(--gold);
       opacity: .6;
     }
@@ -390,37 +261,34 @@
       line-height: 1.7;
     }
     .hero-badges {
-      display: flex; flex-wrap: wrap; justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
     }
-    .hero-badge {
-      display: flex; align-items: center; gap: 6px;
-      background: rgba(255,255,255,.12);
-      border: 1px solid rgba(255,255,255,.2);
-      backdrop-filter: blur(6px);
-      padding: 7px 16px;
-      border-radius: 100px;
-      font-size: .78rem;
-      font-weight: 500;
-    }
-    .hero-badge .icon { color: var(--gold); font-size: .8rem; }
-
     .hero-scroll {
-      position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 2;
-      display: flex; flex-direction: column; align-items: center; gap: 6px;
-      font-size: .68rem; letter-spacing: .15em; text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      font-size: .68rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
       color: rgba(255,255,255,.5);
       animation: scrollBob 2.2s ease-in-out infinite;
     }
     @keyframes scrollBob {
-      0%,100% { transform: translateX(-50%) translateY(0); }
-      50%      { transform: translateX(-50%) translateY(8px); }
-    }
-
-    /* ─── BOOKING ENGINE ─────────────────────────── */
+          0%,100% { transform: translateX(-50%) translateY(0); }
+          50%      { transform: translateX(-50%) translateY(8px); }
+        }
     .booking-wrap {
-      position: relative; z-index: 10;
+      position: relative;
+      z-index: 10;
       margin-top: -56px;
       padding: 0 24px;
     }
@@ -438,10 +306,10 @@
       animation: bookingPulse 1.6s ease;
     }
     @keyframes bookingPulse {
-      0%   { box-shadow: 0 0 0 0 rgba(212,166,60,.55), var(--shadow); }
-      60%  { box-shadow: 0 0 0 14px rgba(212,166,60,0), var(--shadow); }
-      100% { box-shadow: 0 0 0 0 rgba(212,166,60,0), var(--shadow); }
-    }
+          0%   { box-shadow: 0 0 0 0 rgba(212,166,60,.55), var(--shadow); }
+          60%  { box-shadow: 0 0 0 14px rgba(212,166,60,0), var(--shadow); }
+          100% { box-shadow: 0 0 0 0 rgba(212,166,60,0), var(--shadow); }
+        }
     .field-group.field-filled select {
       border-color: var(--gold);
       transition: border-color .3s ease;
@@ -452,11 +320,14 @@
       font-weight: 600;
       color: var(--forest);
       margin-bottom: 24px;
-      display: flex; align-items: center; gap: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
     .booking-title::before {
       content: '';
-      width: 4px; height: 22px;
+      width: 4px;
+      height: 22px;
       background: var(--gold);
       border-radius: 2px;
     }
@@ -466,7 +337,11 @@
       gap: 16px;
       align-items: end;
     }
-    .field-group { display: flex; flex-direction: column; gap: 6px; }
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
     .field-group label {
       font-size: .68rem;
       font-weight: 600;
@@ -474,8 +349,7 @@
       text-transform: uppercase;
       color: var(--sage);
     }
-    .field-group select,
-    .field-group input {
+    .field-group select, .field-group input {
       border: none;
       border-bottom: 2px solid var(--smoke);
       padding: 10px 4px;
@@ -487,8 +361,9 @@
       transition: border-color .2s;
       width: 100%;
     }
-    .field-group select:focus,
-    .field-group input:focus { border-color: var(--gold); }
+    .field-group select:focus, .field-group input:focus {
+      border-color: var(--gold);
+    }
     .btn-book {
       background: var(--forest);
       color: var(--gold);
@@ -504,188 +379,168 @@
       transition: .25s;
       white-space: nowrap;
     }
-    .btn-book:hover { background: var(--gold); color: var(--forest); }
+    .btn-book:hover {
+      background: var(--gold);
+      color: var(--forest);
+    }
     .booking-note {
       margin-top: 14px;
       font-size: .75rem;
       color: var(--sage);
-      display: flex; align-items: center; gap: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
-    .booking-note a { color: var(--forest); text-decoration: underline; font-weight: 600; }
-    .booking-note a:hover { color: var(--amber); }
-
-    /* ─── SECTION COMMONS ────────────────────────── */
-    .section { padding: 96px 24px; }
-    .section-inner { max-width: 1100px; margin: 0 auto; }
-    .section-eyebrow {
-      font-family: var(--mono);
-      font-size: .7rem;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--amber);
-      margin-bottom: 12px;
-    }
-    .section-h2 {
-      font-family: var(--serif);
-      font-size: clamp(2rem, 4vw, 2.9rem);
-      font-weight: 700;
+    .booking-note a {
       color: var(--forest);
-      line-height: 1.2;
-      margin-bottom: 16px;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    .booking-note a:hover {
+      color: var(--amber);
+    }
+    .section {
+      padding: 96px 24px;
     }
     .section-lead {
-      font-size: 1rem;
-      color: #5a6b5e;
-      line-height: 1.8;
       max-width: 600px;
     }
-    .divider {
-      width: 52px; height: 3px;
-      background: var(--gold);
-      border-radius: 2px;
-      margin: 20px 0;
-    }
-
-    /* ─── STATS BAR ──────────────────────────────── */
     .stats-bar {
-      background: var(--forest);
       padding: 40px 24px;
     }
     .stats-inner {
-      max-width: 1100px; margin: 0 auto;
-      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 24px;
-      text-align: center;
     }
-    .stat-item {}
     .stat-num {
-      font-family: var(--serif);
       font-size: 2.8rem;
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
     }
     .stat-label {
       font-size: .8rem;
-      color: rgba(255,255,255,.6);
-      margin-top: 6px;
-      text-transform: uppercase;
       letter-spacing: .06em;
     }
-
-    /* ─── ZONE CARDS ─────────────────────────────── */
     .zones-grid {
-      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
       margin-top: 52px;
     }
     .zone-card {
-      position: relative;
-      border-radius: var(--r-lg);
-      overflow: hidden;
       height: 420px;
-      cursor: pointer;
-      box-shadow: var(--shadow);
     }
     .zone-slideshow {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      transition: transform 0.7s ease; /* Hover effect ke liye */
-    }
-    .zone-card:hover .zone-slideshow {
-      transform: scale(1.1); /* Card par mouse le jane par smooth zoom */
-    }
-    .zone-slideshow img {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 1.1s ease;
-    }
-    .zone-slideshow img.active {
-      opacity: 1;
+      transition: transform 0.7s ease;
     }
     .zone-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(10,22,11,.92) 0%, rgba(10,22,11,.15) 55%, transparent 100%);
-      display: flex; flex-direction: column; justify-content: flex-end;
       padding: 28px;
-      transition: background .4s;
-    }
-    .zone-card:hover .zone-overlay {
-      background: linear-gradient(to top, rgba(10,22,11,.97) 0%, rgba(10,22,11,.45) 60%, transparent 100%);
-    }
-    .zone-badge {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--forest);
-      font-size: .65rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 100px;
-      margin-bottom: 10px;
-      width: fit-content;
     }
     .zone-name {
-      font-family: var(--serif);
       font-size: 1.7rem;
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.1;
-      margin-bottom: 8px;
     }
     .zone-desc {
       font-size: .82rem;
-      color: rgba(255,255,255,.7);
-      line-height: 1.6;
       margin-bottom: 16px;
     }
-    .zone-tags {
-      display: flex; flex-wrap: wrap; gap: 6px;
-    }
     .zone-tag {
-      background: rgba(255,255,255,.12);
-      border: 1px solid rgba(255,255,255,.2);
-      color: rgba(255,255,255,.8);
       font-size: .68rem;
-      padding: 3px 10px;
-      border-radius: 100px;
     }
     .zone-more {
       margin-top: 14px;
-      display: flex; align-items: center; gap: 6px;
-      color: var(--gold);
       font-size: .78rem;
-      font-weight: 600;
-      opacity: 0;
-      transform: translateY(6px);
-      transition: .3s;
     }
-    .zone-card:hover .zone-more { opacity: 1; transform: translateY(0); }
-
-    /* ─── LUXURY PROMO CARD ──────────────────────── */
-    .luxury-promo-card { position: relative; margin-top: 48px; border-radius: var(--r-lg); overflow: hidden; min-height: 280px; box-shadow: var(--shadow); display: flex; align-items: stretch; }
-    .mini-zone-card { background: var(--white); border-radius: var(--r-md); padding: 18px; box-shadow: 0 2px 16px rgba(15,28,16,.06); cursor: pointer; transition: transform .2s, box-shadow .2s; }
-    .mini-zone-card:hover, .mini-zone-card:focus-visible { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(15,28,16,.14); outline: none; }
-    .mini-zone-more { margin-top: 12px; display: flex; align-items: center; gap: 5px; color: var(--amber); font-size: .74rem; font-weight: 700; }
-    .luxury-promo-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-    .luxury-promo-overlay { position: relative; z-index: 1; width: 100%; background: linear-gradient(110deg, rgba(10,22,11,.94) 0%, rgba(10,22,11,.78) 55%, rgba(10,22,11,.35) 100%); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; padding: 44px 40px; }
-    .luxury-promo-eyebrow { font-family: var(--mono); font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
-    .luxury-promo-text h3 { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 700; color: var(--white); margin-bottom: 10px; line-height: 1.15; }
-    .luxury-promo-text p { font-size: .9rem; color: rgba(255,255,255,.78); max-width: 460px; line-height: 1.7; }
-    .luxury-promo-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--forest); font-weight: 700; font-size: .85rem; padding: 15px 28px; border-radius: var(--r-sm); white-space: nowrap; transition: .2s; flex-shrink: 0; }
-    .luxury-promo-btn:hover { background: #fff; transform: translateY(-2px); }
-    @media (max-width: 600px) {
-      .luxury-promo-overlay { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
-      .luxury-promo-btn { width: 100%; justify-content: center; }
+    .luxury-promo-card {
+      position: relative;
+      margin-top: 48px;
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      min-height: 280px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: stretch;
     }
-
-    /* ─── SAFARI TYPES ───────────────────────────── */
-    .safari-types { background: var(--cream); }
+    .mini-zone-card {
+      background: var(--white);
+      border-radius: var(--r-md);
+      padding: 18px;
+      box-shadow: 0 2px 16px rgba(15,28,16,.06);
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .mini-zone-card:hover, .mini-zone-card:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(15,28,16,.14);
+      outline: none;
+    }
+    .mini-zone-more {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--amber);
+      font-size: .74rem;
+      font-weight: 700;
+    }
+    .luxury-promo-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .luxury-promo-overlay {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      background: linear-gradient(110deg, rgba(10,22,11,.94) 0%, rgba(10,22,11,.78) 55%, rgba(10,22,11,.35) 100%);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 44px 40px;
+    }
+    .luxury-promo-eyebrow {
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .luxury-promo-text h3 {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+      line-height: 1.15;
+    }
+    .luxury-promo-text p {
+      font-size: .9rem;
+      color: rgba(255,255,255,.78);
+      max-width: 460px;
+      line-height: 1.7;
+    }
+    .luxury-promo-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: var(--forest);
+      font-weight: 700;
+      font-size: .85rem;
+      padding: 15px 28px;
+      border-radius: var(--r-sm);
+      white-space: nowrap;
+      transition: .2s;
+      flex-shrink: 0;
+    }
+    .luxury-promo-btn:hover {
+      background: #fff;
+      transform: translateY(-2px);
+    }
+    .safari-types {
+      background: var(--cream);
+    }
     .safari-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -699,19 +554,34 @@
       box-shadow: 0 4px 20px rgba(15,28,16,.08);
       transition: transform .3s, box-shadow .3s;
     }
-    .safari-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+    .safari-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
     .safari-img {
       height: 220px;
       overflow: hidden;
     }
-    .safari-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
-    .safari-card:hover .safari-img img { transform: scale(1.08); }
-    .safari-body { padding: 24px; }
+    .safari-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s;
+    }
+    .safari-card:hover .safari-img img {
+      transform: scale(1.08);
+    }
+    .safari-body {
+      padding: 24px;
+    }
     .safari-icon {
-      width: 44px; height: 44px;
+      width: 44px;
+      height: 44px;
       background: var(--cream);
       border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 1.1rem;
       margin-bottom: 14px;
       color: var(--forest);
@@ -730,31 +600,48 @@
       margin-bottom: 20px;
     }
     .safari-meta {
-      display: flex; flex-wrap: wrap; gap: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
       font-size: .75rem;
     }
     .meta-item {
-      display: flex; align-items: center; gap: 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
       color: var(--sage);
     }
-    .meta-item .icon { color: var(--amber); font-size: .8rem; }
+    .meta-item .icon {
+      color: var(--amber);
+      font-size: .8rem;
+    }
     .price-tag {
       margin-top: 18px;
       padding-top: 16px;
       border-top: 1px solid var(--smoke);
-      display: flex; align-items: baseline; gap: 4px;
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
     }
-    .price-from { font-size: .7rem; color: var(--sage); }
+    .price-from {
+      font-size: .7rem;
+      color: var(--sage);
+    }
     .price-num {
       font-family: var(--serif);
       font-size: 1.6rem;
       font-weight: 700;
       color: var(--forest);
     }
-    .price-pax { font-size: .72rem; color: var(--sage); }
-    .usd-hint { font-size: .6em; font-weight: 500; opacity: .7; margin-left: 3px; white-space: nowrap; }
-
-    /* ─── PRICING TABLE ──────────────────────────── */
+    .price-pax {
+      font-size: .72rem;
+      color: var(--sage);
+    }
+    .usd-hint {
+      font-size: .6em;
+      opacity: .7;
+      white-space: nowrap;
+    }
     .pricing-table {
       width: 100%;
       border-collapse: collapse;
@@ -778,8 +665,13 @@
       border-bottom: 1px solid var(--smoke);
       color: var(--ink);
     }
-    .pricing-table tr:hover td { background: var(--cream); }
-    .pricing-table .zone-col { font-weight: 600; color: var(--forest); }
+    .pricing-table tr:hover td {
+      background: var(--cream);
+    }
+    .pricing-table .zone-col {
+      font-weight: 600;
+      color: var(--forest);
+    }
     .pricing-table .price-cell {
       font-family: var(--serif);
       font-size: 1.05rem;
@@ -793,11 +685,18 @@
       font-size: .68rem;
       font-weight: 600;
     }
-    .avail-open { background: #dcf5e7; color: #1a6b3a; }
-    .avail-limited { background: #fff3dc; color: #8a5c00; }
-    .avail-closed { background: #fde8e8; color: #a02020; }
-
-    /* ─── GUIDE INFO ─────────────────────────────── */
+    .avail-open {
+      background: #dcf5e7;
+      color: #1a6b3a;
+    }
+    .avail-limited {
+      background: #fff3dc;
+      color: #8a5c00;
+    }
+    .avail-closed {
+      background: #fde8e8;
+      color: #a02020;
+    }
     .guide-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -811,10 +710,15 @@
       height: 480px;
       position: relative;
     }
-    .guide-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .guide-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     .guide-img-badge {
       position: absolute;
-      bottom: 24px; left: 24px;
+      bottom: 24px;
+      left: 24px;
       background: var(--forest);
       color: var(--gold);
       padding: 12px 18px;
@@ -822,15 +726,27 @@
       font-size: .78rem;
       font-weight: 600;
     }
-    .guide-points { display: flex; flex-direction: column; gap: 22px; margin-top: 28px; }
-    .guide-point { display: flex; gap: 16px; align-items: flex-start; }
+    .guide-points {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      margin-top: 28px;
+    }
+    .guide-point {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
     .guide-num {
       flex-shrink: 0;
-      width: 36px; height: 36px;
+      width: 36px;
+      height: 36px;
       background: var(--forest);
       color: var(--gold);
       border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-family: var(--serif);
       font-size: .9rem;
       font-weight: 700;
@@ -847,11 +763,16 @@
       color: #5a6b5e;
       line-height: 1.7;
     }
-
-    /* ─── TESTIMONIALS ───────────────────────────── */
-    .testimonials { background: var(--forest); color: var(--white); }
-    .testimonials .section-h2 { color: var(--white); }
-    .testimonials .section-eyebrow { color: var(--gold); }
+    .testimonials {
+      background: var(--forest);
+      color: var(--white);
+    }
+    .testimonials .section-h2 {
+      color: var(--white);
+    }
+    .testimonials .section-eyebrow {
+      color: var(--gold);
+    }
     .test-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -865,8 +786,14 @@
       padding: 28px;
       transition: background .3s;
     }
-    .test-card:hover { background: rgba(255,255,255,.1); }
-    .test-stars { color: var(--gold); font-size: .85rem; margin-bottom: 14px; }
+    .test-card:hover {
+      background: rgba(255,255,255,.1);
+    }
+    .test-stars {
+      color: var(--gold);
+      font-size: .85rem;
+      margin-bottom: 14px;
+    }
     .test-text {
       font-family: var(--serif);
       font-size: 1.05rem;
@@ -875,182 +802,69 @@
       line-height: 1.7;
       margin-bottom: 20px;
     }
-    .test-author { display: flex; align-items: center; gap: 12px; }
+    .test-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
     .test-avatar {
-      width: 42px; height: 42px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       background: var(--moss);
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-family: var(--serif);
       font-size: 1rem;
       font-weight: 700;
       color: var(--gold);
     }
-    .test-name { font-weight: 600; font-size: .88rem; }
-    .test-loc { font-size: .75rem; color: rgba(255,255,255,.5); }
-
-    /* ─── FAQ ────────────────────────────────────── */
-    .faq-list { margin-top: 48px; max-width: 760px; }
-    .faq-item {
-      border-bottom: 1px solid var(--smoke);
-    }
-    .faq-q {
-      width: 100%;
-      background: none;
-      border: none;
-      text-align: left;
-      padding: 20px 0;
-      font-family: var(--sans);
-      font-size: .95rem;
+    .test-name {
       font-weight: 600;
-      color: var(--forest);
-      cursor: pointer;
-      display: flex; justify-content: space-between; align-items: center;
-      gap: 12px;
-    }
-    .faq-q .faq-icon { flex-shrink: 0; color: var(--amber); transition: transform .3s; }
-    .faq-item.open .faq-q .faq-icon { transform: rotate(45deg); }
-    .faq-a {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .4s ease, padding .3s;
       font-size: .88rem;
-      color: #5a6b5e;
-      line-height: 1.8;
     }
-    .faq-item.open .faq-a {
-      max-height: 300px;
-      padding-bottom: 18px;
+    .test-loc {
+      font-size: .75rem;
+      color: rgba(255,255,255,.5);
     }
-
-    /* ─── GUIDE SECTION (new SEO content) ────────── */
-    .guide-section { background: var(--paper); }
+    .faq-list {
+      margin-top: 48px;
+      max-width: 760px;
+    }
+    .guide-section {
+      background: var(--paper);
+    }
     .guide-toc {
-      display: flex; flex-wrap: wrap; gap: 10px;
-      margin-top: 40px; padding: 20px 24px;
-      background: var(--white);
-      border: 1px solid var(--smoke);
-      border-radius: var(--r-md);
+      gap: 10px;
+      margin-top: 40px;
     }
     .guide-toc a {
       font-size: .78rem;
-      font-weight: 600;
-      color: var(--forest);
-      background: var(--cream);
       padding: 7px 14px;
-      border-radius: 100px;
-      transition: background .2s, color .2s;
     }
-    .guide-toc a:hover { background: var(--gold); color: var(--forest); }
-    .guide-prose { margin-top: 56px; max-width: 720px; }
+    .guide-prose {
+      margin-top: 56px;
+      max-width: 720px;
+    }
     .guide-prose h3 {
-      font-family: var(--serif);
       font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--forest);
       margin-top: 52px;
       margin-bottom: 16px;
       scroll-margin-top: 90px;
     }
-    .guide-prose h3:first-child { margin-top: 0; }
+    .guide-prose h3:first-child {
+      margin-top: 0;
+    }
     .guide-prose p {
       font-size: .95rem;
-      line-height: 1.85;
-      color: #3d4a40;
       margin-bottom: 18px;
     }
-    .guide-prose p strong { color: var(--forest); }
-    .zone-compare-table { max-width: 720px; margin: 28px 0; font-size: .85rem; }
-
-    /* ─── FOOTER ─────────────────────────────────── */
-    footer {
-      background: var(--ink);
-      color: rgba(255,255,255,.6);
-      padding: 64px 24px 32px;
-    }
-    .footer-inner {
-      max-width: 1100px; margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 40px;
-    }
-    .footer-brand-name {
-      font-family: var(--serif);
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 12px;
-    }
-    .footer-brand-name span { color: var(--gold); }
-    .footer-brand-desc { font-size: .83rem; line-height: 1.8; max-width: 280px; }
-    .footer-social {
-      display: flex; gap: 12px; margin-top: 20px;
-    }
-    .footer-social a {
-      width: 36px; height: 36px;
-      background: rgba(255,255,255,.08);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      color: rgba(255,255,255,.6);
+    .zone-compare-table {
+      max-width: 720px;
+      margin: 28px 0;
       font-size: .85rem;
-      transition: .2s;
     }
-    .footer-social a:hover { background: var(--gold); color: var(--forest); }
-    .footer-col h4 {
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--white);
-      margin-bottom: 18px;
-    }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .footer-col ul li a {
-      font-size: .83rem;
-      color: rgba(255,255,255,.55);
-      transition: color .2s;
-    }
-    .footer-col ul li a:hover { color: var(--gold); }
-    .footer-bottom {
-      max-width: 1100px; margin: 40px auto 0;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255,255,255,.08);
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 10px;
-      font-size: .75rem;
-    }
-
-    /* ─── WHATSAPP FLOAT ─────────────────────────── */
-    .wa-float {
-      position: fixed;
-      bottom: 28px; right: 28px;
-      width: 60px; height: 60px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      color: #fff;
-      font-size: 1.6rem;
-      z-index: 800;
-      box-shadow: 0 6px 24px rgba(37,211,102,.4);
-      transition: transform .2s, box-shadow .2s;
-    }
-    .wa-float:hover { transform: scale(1.1); box-shadow: 0 10px 30px rgba(37,211,102,.5); }
-    .wa-tooltip {
-      position: absolute;
-      right: 72px;
-      background: var(--ink);
-      color: #fff;
-      font-size: .75rem;
-      white-space: nowrap;
-      padding: 6px 12px;
-      border-radius: var(--r-sm);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity .2s;
-    }
-    .wa-float:hover .wa-tooltip { opacity: 1; }
-
-    /* ─── SEASON BADGES ──────────────────────────── */
     .season-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1064,15 +878,31 @@
       border-left: 4px solid var(--gold);
       box-shadow: 0 2px 16px rgba(15,28,16,.06);
     }
-    .season-icon { font-size: 1.5rem; margin-bottom: 10px; }
-    .season-name { font-weight: 700; font-size: .9rem; color: var(--forest); margin-bottom: 4px; }
-    .season-months { font-size: .75rem; color: var(--amber); font-weight: 600; margin-bottom: 8px; }
-    .season-text { font-size: .82rem; color: #5a6b5e; line-height: 1.6; }
-
-    /* ─── BOOKING MODAL / INLINE CONFIRM ─────────── */
+    .season-icon {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .season-name {
+      font-weight: 700;
+      font-size: .9rem;
+      color: var(--forest);
+      margin-bottom: 4px;
+    }
+    .season-months {
+      font-size: .75rem;
+      color: var(--amber);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .season-text {
+      font-size: .82rem;
+      color: #5a6b5e;
+      line-height: 1.6;
+    }
     .confirm-toast {
       position: fixed;
-      top: 80px; right: 24px;
+      top: 80px;
+      right: 24px;
       background: var(--forest);
       color: var(--white);
       padding: 16px 24px;
@@ -1083,95 +913,88 @@
       transform: translateX(120%);
       transition: transform .4s;
     }
-    .confirm-toast.show { transform: translateX(0); }
-
-    /* ─── SUCCESS MODAL ──────────────────────────── */
+    .confirm-toast.show {
+      transform: translateX(0);
+    }
     .success-modal-backdrop {
-      position: fixed; inset: 0; z-index: 1200;
+      position: fixed;
+      inset: 0;
+      z-index: 1200;
       background: rgba(10,22,11,.72);
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 24px;
-      opacity: 0; pointer-events: none;
+      opacity: 0;
+      pointer-events: none;
       transition: opacity .3s ease;
     }
-    .success-modal-backdrop.show { opacity: 1; pointer-events: auto; }
+    .success-modal-backdrop.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
     .success-modal-card {
       background: var(--paper);
       border-radius: var(--r-lg);
-      max-width: 420px; width: 100%;
+      max-width: 420px;
+      width: 100%;
       padding: 40px 32px 32px;
       text-align: center;
       box-shadow: 0 24px 64px rgba(0,0,0,.35);
       transform: translateY(16px) scale(.97);
       transition: transform .3s ease;
     }
-    .success-modal-backdrop.show .success-modal-card { transform: translateY(0) scale(1); }
+    .success-modal-backdrop.show .success-modal-card {
+      transform: translateY(0) scale(1);
+    }
     .success-modal-icon {
-      width: 68px; height: 68px; margin: 0 auto 20px;
-      background: var(--forest); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--gold); font-size: 1.8rem;
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 20px;
+      background: var(--forest);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 1.8rem;
     }
     .success-modal-card h3 {
-      font-family: var(--serif); font-size: 1.6rem; font-weight: 700;
-      color: var(--forest); margin-bottom: 12px;
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--forest);
+      margin-bottom: 12px;
     }
     .success-modal-card p {
-      font-size: .92rem; color: #5a6b5e; line-height: 1.7; margin-bottom: 28px;
+      font-size: .92rem;
+      color: #5a6b5e;
+      line-height: 1.7;
+      margin-bottom: 28px;
     }
-    .success-modal-card p strong { color: var(--forest); }
+    .success-modal-card p strong {
+      color: var(--forest);
+    }
     .success-modal-close {
-      display: inline-block; width: 100%;
-      background: var(--forest); color: var(--gold);
-      border: 2px solid var(--gold); padding: 13px 28px;
-      border-radius: var(--r-sm); font-family: var(--sans);
-      font-size: .82rem; font-weight: 700; letter-spacing: .08em;
-      text-transform: uppercase; cursor: pointer; transition: .25s;
+      display: inline-block;
+      width: 100%;
+      background: var(--forest);
+      color: var(--gold);
+      border: 2px solid var(--gold);
+      padding: 13px 28px;
+      border-radius: var(--r-sm);
+      font-family: var(--sans);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: .25s;
     }
-    .success-modal-close:hover { background: var(--gold); color: var(--forest); }
-
-    /* ─── RESPONSIVE ─────────────────────────────── */
-    @media (max-width: 900px) {
-      .guide-grid { grid-template-columns: 1fr; }
-      .footer-inner { grid-template-columns: 1fr 1fr; }
+    .success-modal-close:hover {
+      background: var(--gold);
+      color: var(--forest);
     }
-    @media (max-width: 600px) {
-  .hero {
-        height: auto;
-        min-height: auto;
-        padding: 130px 20px 100px;
-      }
-      .hero h1 { 
-        font-size: 2.2rem;
-        margin-bottom: 12px;
-      }
-      .hero-sub {
-        font-size: 0.95rem;
-        margin-bottom: 24px;
-      }
-  .nav { padding: 0 20px; }
-  .mobile-menu-btn { display: block; }
-  .nav-links { 
-    display: none; /* Default hidden */
-    flex-direction: column; 
-    position: absolute; 
-    top: 68px; 
-    left: 0; 
-    right: 0; 
-    background: var(--forest); 
-    padding: 20px; 
-    text-align: center;
-    border-bottom: 2px solid var(--gold);
-  }
-  .nav-links.active {
-    display: flex; /* Button click hone par show hoga */
-  }
-  .hero h1 { font-size: 2.6rem; }
-  .footer-inner { grid-template-columns: 1fr; }
-  .booking-card { padding: 24px 18px; }
-}
-
-    /* ─── ZONES VIDEO CARD ───────────────────────── */
     .video-wide-card {
       display: flex;
       flex-direction: column;
@@ -1181,70 +1004,72 @@
       box-shadow: var(--shadow);
       height: 420px;
     }
-    @media (min-width: 900px) {
-      .video-wide-card { grid-column: span 2; }
-    }
     .yt-facade {
       flex-grow: 1;
-      position: relative;
-      border-radius: var(--r-md);
-      overflow: hidden;
-      background: #000;
-      box-shadow: inset 0 0 10px rgba(0,0,0,.5);
-      cursor: pointer;
-    }
-    .yt-facade img {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
     }
     .yt-play-btn {
-      position: absolute; top: 50%; left: 50%;
-      width: 64px; height: 64px;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      background: rgba(10,22,11,.55);
-      border: 2px solid rgba(255,255,255,.85);
-      display: flex; align-items: center; justify-content: center;
-      transition: transform .25s ease, background .25s ease;
+      width: 64px;
+      height: 64px;
     }
     .yt-play-btn::before {
-      content: '';
-      width: 0; height: 0;
-      margin-left: 4px;
-      border-style: solid;
       border-width: 11px 0 11px 18px;
-      border-color: transparent transparent transparent var(--gold);
     }
-    .yt-facade:hover .yt-play-btn,
-    .yt-facade:focus-visible .yt-play-btn {
-      transform: translate(-50%, -50%) scale(1.08);
-      background: rgba(10,22,11,.75);
+    @media (max-width: 600px) {
+      .luxury-promo-overlay {
+        padding: 32px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .luxury-promo-btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .hero {
+        height: auto;
+        min-height: auto;
+        padding: 130px 20px 100px;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+      }
+      .hero-sub {
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+      }
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+      .booking-card {
+        padding: 24px 18px;
+      }
     }
-    /* Desktop Safari Booking Form Buttons Fix */
-@media (min-width: 900px) {
-  /* Button group ko 2 columns ki width dena */
-  .booking-grid .field-group:last-child {
-    grid-column: span 2;
-    flex-direction: row; /* Buttons ko side-by-side lana */
-    gap: 16px;
-  }
-
-  /* Khali space wale label ko chhupana taaki grid alignment perfectly base par match kare */
-  .booking-grid .field-group:last-child label {
-    display: none;
-  }
-
-  /* Buttons ki formatting aur alignment theek karna */
-  .booking-grid .field-group:last-child .btn-book {
-    margin-top: 0 !important; /* WhatsApp button ke inline margin ko override karne ke liye */
-    flex: 1; /* Dono buttons ko ek jaisi width dene ke liye */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 13px 15px; /* Padding thodi adjust ki hai */
-  }
-}
+    @media (max-width: 900px) {
+      .guide-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (min-width: 900px) {
+      .video-wide-card {
+        grid-column: span 2;
+      }
+      .booking-grid .field-group:last-child {
+        grid-column: span 2;
+        flex-direction: row;
+        gap: 16px;
+      }
+      .booking-grid .field-group:last-child label {
+        display: none;
+      }
+      .booking-grid .field-group:last-child .btn-book {
+        margin-top: 0 !important;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1362,7 +1187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="/luxury-jim-corbett-safari-package.html">Luxury Safari</a>
     <a href="#booking" class="nav-cta">Book Safari</a>
   </div>
-  <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">
+  <button class="mobile-menu-btn" aria-expanded="false" aria-label="Toggle menu" onclick="toggleMenu()">
   <svg class="icon"><use href="#icon-chevron-down"></use></svg>
 </button>
 </nav>
@@ -1515,9 +1340,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- CARD 1: Dhikala -->
       <div class="zone-card" role="button" tabindex="0" aria-label="Book Dhikala zone safari" onclick="bookZone('Dhikala Core Zone','Canter Safari (Dhikala)')" onkeydown="if(event.key==='Enter'){this.click();}">
         <div class="zone-slideshow">
-          <img class="z-slide-1" src="/dhikala-zone/dhikala-cantor-safari.webp" alt="Dhikala 1" loading="lazy" width="800" height="600">
-          <img class="z-slide-2" src="/dhikala-zone/dhikala-jeep-safari.webp" alt="Dhikala 2" loading="lazy" width="800" height="600">
-          <img class="z-slide-3" src="/dhikala-zone/dhikala-rest-house.webp" alt="Dhikala 3" loading="lazy" width="800" height="600">
+          <img class="z-slide-1" src="/dhikala-zone/dhikala-cantor-safari.webp" alt="Dhikala 1" loading="lazy" width="800" height="600" decoding="async">
+          <img class="z-slide-2" src="/dhikala-zone/dhikala-jeep-safari.webp" alt="Dhikala 2" loading="lazy" width="800" height="600" decoding="async">
+          <img class="z-slide-3" src="/dhikala-zone/dhikala-rest-house.webp" alt="Dhikala 3" loading="lazy" width="800" height="600" decoding="async">
         </div>
         <div class="zone-overlay">
           <div class="zone-badge">Tiger Hub — Core Zone</div>
@@ -1535,9 +1360,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- CARD 2: Bijrani -->
       <div class="zone-card" role="button" tabindex="0" aria-label="Book Bijrani zone safari" onclick="bookZone('Bijrani Zone','Exclusive Jeep Safari')" onkeydown="if(event.key==='Enter'){this.click();}">
         <div class="zone-slideshow">
-          <img class="z-slide-1" src="/bijrani-zone/dhikala%20jeep%20safari.webp" alt="Bijrani 1" loading="lazy" width="800" height="600">
-          <img class="z-slide-2" src="/bijrani-zone/bijrani-elephant-safari.webp" alt="Bijrani 2" loading="lazy" width="800" height="600">
-          <img class="z-slide-3" src="/bijrani-zone/jeep-safari.webp" alt="Bijrani 3" loading="lazy" width="800" height="600">
+          <img class="z-slide-1" src="/bijrani-zone/dhikala%20jeep%20safari.webp" alt="Bijrani 1" loading="lazy" width="800" height="600" decoding="async">
+          <img class="z-slide-2" src="/bijrani-zone/bijrani-elephant-safari.webp" alt="Bijrani 2" loading="lazy" width="800" height="600" decoding="async">
+          <img class="z-slide-3" src="/bijrani-zone/jeep-safari.webp" alt="Bijrani 3" loading="lazy" width="800" height="600" decoding="async">
         </div>
         <div class="zone-overlay">
           <div class="zone-badge">Bestseller</div>
@@ -1555,9 +1380,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- CARD 3: Jhirna & Dhela -->
       <div class="zone-card" role="button" tabindex="0" aria-label="Book Jhirna zone safari" onclick="bookZone('Jhirna (Year-Round)','Exclusive Jeep Safari')" onkeydown="if(event.key==='Enter'){this.click();}">
         <div class="zone-slideshow">
-          <img class="z-slide-1" src="/zhirna-dhela-zone/zhirna-tiger-safari.webp" alt="Jhirna 1" loading="lazy" width="800" height="600">
-          <img class="z-slide-2" src="/zhirna-dhela-zone/zhirna-tiger-jeep-safari.webp" alt="Jhirna 2" loading="lazy" width="800" height="600">
-          <img class="z-slide-3" src="/zhirna-dhela-zone/dhela-jeep-safari.webp" alt="Jhirna 3" loading="lazy" width="800" height="600">
+          <img class="z-slide-1" src="/zhirna-dhela-zone/zhirna-tiger-safari.webp" alt="Jhirna 1" loading="lazy" width="800" height="600" decoding="async">
+          <img class="z-slide-2" src="/zhirna-dhela-zone/zhirna-tiger-jeep-safari.webp" alt="Jhirna 2" loading="lazy" width="800" height="600" decoding="async">
+          <img class="z-slide-3" src="/zhirna-dhela-zone/dhela-jeep-safari.webp" alt="Jhirna 3" loading="lazy" width="800" height="600" decoding="async">
         </div>
         <div class="zone-overlay">
           <div class="zone-badge">Open Year-Round</div>
@@ -1575,9 +1400,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- CARD 4: Phato -->
       <div class="zone-card" role="button" tabindex="0" aria-label="Book Phato zone safari" onclick="bookZone('Phato Zone','Exclusive Jeep Safari')" onkeydown="if(event.key==='Enter'){this.click();}">
         <div class="zone-slideshow">
-          <img class="z-slide-1" src="/phato-garjiya-zone/phato-tiger-safari.webp" alt="Phato zone tiger safari" loading="lazy" width="800" height="600">
-          <img class="z-slide-2" src="/phato-garjiya-zone/phato-jeep-safari.webp" alt="Phato zone jeep safari" loading="lazy" width="800" height="600">
-          <img class="z-slide-3" src="/phato-garjiya-zone/phato-elephant-safari.webp" alt="Phato zone elephant safari" loading="lazy" width="800" height="600">
+          <img class="z-slide-1" src="/phato-garjiya-zone/phato-tiger-safari.webp" alt="Phato zone tiger safari" loading="lazy" width="800" height="600" decoding="async">
+          <img class="z-slide-2" src="/phato-garjiya-zone/phato-jeep-safari.webp" alt="Phato zone jeep safari" loading="lazy" width="800" height="600" decoding="async">
+          <img class="z-slide-3" src="/phato-garjiya-zone/phato-elephant-safari.webp" alt="Phato zone elephant safari" loading="lazy" width="800" height="600" decoding="async">
         </div>
         <div class="zone-overlay">
           <div class="zone-badge">New Zone 2026</div>
@@ -1602,7 +1427,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
              data-yt-title="Dhikala Spotted Royal Bengal Tiger Jim Corbett National Park"
              aria-label="Play video: Dhikala Spotted Royal Bengal Tiger Jim Corbett National Park"
              onclick="loadYouTubeFacade(this)" onkeydown="if(event.key==='Enter'){this.click();}">
-          <img src="https://i.ytimg.com/vi/Tq7PQrzJ7WE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <img src="https://i.ytimg.com/vi/Tq7PQrzJ7WE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" decoding="async">
           <span class="yt-play-btn" aria-hidden="true"></span>
         </div>
       </div>
@@ -1646,7 +1471,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="luxury-promo-card">
-      <img src="/resorts/taj-corbett-1.webp" alt="Luxury resort near Jim Corbett" loading="lazy" width="1400" height="500" class="luxury-promo-bg">
+      <img src="/resorts/taj-corbett-1.webp" alt="Luxury resort near Jim Corbett" loading="lazy" width="1400" height="500" class="luxury-promo-bg" decoding="async">
       <div class="luxury-promo-overlay">
         <div class="luxury-promo-text">
           <div class="luxury-promo-eyebrow">✦ For a More Elevated Trip ✦</div>
@@ -2062,7 +1887,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
            data-yt-title="Dhikala Spotted Royal Bengal Tiger Jim Corbett National Park"
            aria-label="Play video: Dhikala Spotted Royal Bengal Tiger Jim Corbett National Park"
            onclick="loadYouTubeFacade(this)" onkeydown="if(event.key==='Enter'){this.click();}">
-        <img src="https://i.ytimg.com/vi/Tq7PQrzJ7WE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+        <img src="https://i.ytimg.com/vi/Tq7PQrzJ7WE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" decoding="async">
         <span class="yt-play-btn" aria-hidden="true"></span>
       </div>
 
@@ -2070,7 +1895,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="faq-list" id="extraFaqList">
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
             How many days should I plan for a Jim Corbett trip?
             <svg class="icon faq-icon"><use href="#icon-plus"></use></svg>
           </button>
@@ -2078,7 +1903,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
             Jeep Safari or Canter Safari — which gives better tiger-sighting odds?
             <svg class="icon faq-icon"><use href="#icon-plus"></use></svg>
           </button>
@@ -2086,7 +1911,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
             Can I choose my exact safari zone, or is it randomly allotted?
             <svg class="icon faq-icon"><use href="#icon-plus"></use></svg>
           </button>
@@ -2094,7 +1919,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
             Is Jim Corbett safe for solo or female travellers?
             <svg class="icon faq-icon"><use href="#icon-plus"></use></svg>
           </button>
@@ -2102,7 +1927,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
             Is there a minimum age for children on safari?
             <svg class="icon faq-icon"><use href="#icon-plus"></use></svg>
           </button>
@@ -2110,7 +1935,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
             Can I bring a professional camera or drone?
             <svg class="icon faq-icon"><use href="#icon-plus"></use></svg>
           </button>
@@ -2118,7 +1943,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
             What should I pack for a Jim Corbett safari?
             <svg class="icon faq-icon"><use href="#icon-plus"></use></svg>
           </button>
@@ -2126,7 +1951,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
             What is Sitabani, and is it worth booking if other zones are full?
             <svg class="icon faq-icon"><use href="#icon-plus"></use></svg>
           </button>
@@ -2134,7 +1959,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
             Which zone should a first-time visitor pick?
             <svg class="icon faq-icon"><use href="#icon-plus"></use></svg>
           </button>
@@ -2142,7 +1967,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
             Is tipping the guide and driver expected?
             <svg class="icon faq-icon"><use href="#icon-plus"></use></svg>
           </button>
@@ -2150,7 +1975,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
             What happens if my safari gets rained out or cancelled?
             <svg class="icon faq-icon"><use href="#icon-plus"></use></svg>
           </button>
@@ -2239,234 +2064,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<script>
-  /* FAQ toggle */
-  function toggleFaq(btn) {
-    const item = btn.closest('.faq-item');
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
-  }
 
-  /* Photo slideshow controller — used for the hero banner and every
-     zone-card mini gallery. It only rotates through images that actually
-     finish loading, so a missing/broken photo gets skipped instead of
-     leaving the slot blank. */
-  function setupSlideshow(container, selector, intervalMs) {
-    if (!container) return;
-    const items = Array.from(container.querySelectorAll(selector));
-    if (!items.length) return;
-
-    const getImg = el => (el.tagName === 'IMG' ? el : el.querySelector('img'));
-    const isLoaded = el => {
-      const img = getImg(el);
-      return !!img && img.complete && img.naturalWidth > 0;
-    };
-
-    let current = -1;
-    let started = false;
-
-    function activate(el) {
-      items.forEach(it => it.classList.remove('active'));
-      el.classList.add('active');
-      current = items.indexOf(el);
-    }
-
-    function tryStart() {
-      if (started) return;
-      const first = items.find(isLoaded);
-      if (!first) return;
-      started = true;
-      activate(first);
-      if (items.length > 1) {
-        setInterval(() => {
-          let next = current;
-          for (let step = 0; step < items.length; step++) {
-            next = (next + 1) % items.length;
-            if (isLoaded(items[next])) break;
-          }
-          if (next !== current && isLoaded(items[next])) activate(items[next]);
-        }, intervalMs);
-      }
-    }
-
-    items.forEach(el => {
-      const img = getImg(el);
-      if (img) img.addEventListener('load', tryStart, { once: true });
-    });
-    tryStart();
-  }
-
-  /* Booking → WhatsApp */
-  function getBookingDetails() {
-  const guestName = document.getElementById('guestname').value.trim();
-  const type  = document.getElementById('type').value;
-  const zone  = document.getElementById('zone').value;
-  const shift = document.getElementById('shift').value;
-  const date  = document.getElementById('date').value;
-  const pax   = document.getElementById('guests').value;
-
-  // Validation Check: Agar date ya guests khali hain toh alert do
-  if (!date || !pax) {
-    alert("Please select a travel date and enter the number of guests before checking availability.");
-    return null; // Form yahin ruk jayega, aage redirect nahi hoga
-  }
-  return { guestName, type, zone, shift, date, pax };
-}
-
-function handleBookingWhatsApp() {
-  const d = getBookingDetails();
-  if (!d) return;
-  const phone = '919536256640';
-  const lines = [
-    `*New Safari Booking Enquiry 2026-27*`,
-    d.guestName ? `Name: ${d.guestName}` : null,
-    `Safari Type: ${d.type}`,
-    `Zone: ${d.zone}`,
-    `Shift: ${d.shift}`,
-    `Travel Date: ${d.date}`,
-    `No. of Guests: ${d.pax}`
-  ].filter(Boolean);
-  const msg = encodeURIComponent(lines.join('\n'));
-  showSuccessModal('whatsapp');
-  setTimeout(() => window.open(`https://wa.me/${phone}?text=${msg}`, '_blank'), 900);
-}
-
-function handleBookingEmail() {
-  const d = getBookingDetails();
-  if (!d) return;
-  const subject = encodeURIComponent('New Safari Booking Enquiry 2026-27');
-  const greeting = d.guestName
-    ? `Hello Royal Bengal Tiger India,\n\nMy name is ${d.guestName}, and I'd like to enquire about a Jim Corbett safari with the following details:\n\n`
-    : `Hello Royal Bengal Tiger India,\n\nI'd like to enquire about a Jim Corbett safari with the following details:\n\n`;
-  const details = [
-    `  Safari Type      :  ${d.type}`,
-    `  Safari Zone      :  ${d.zone}`,
-    `  Safari Shift     :  ${d.shift}`,
-    `  Travel Date      :  ${d.date}`,
-    `  No. of Guests    :  ${d.pax}`,
-    `  Contact/WhatsApp Number (optional):  `
-  ].join('\n');
-  const closing = `\n\nPlease confirm availability and let me know the next steps.\n\nThank you!`;
-  const body = encodeURIComponent(greeting + details + closing);
-  showSuccessModal('email');
-  setTimeout(() => { window.location.href = `mailto:info@royalbengaltigerindia.com?subject=${subject}&body=${body}`; }, 900);
-}
-
-/* Zone card click → jump to the booking form with that zone pre-filled */
-function bookZone(zoneValue, typeValue) {
-  const zoneField = document.getElementById('zone');
-  const typeField = document.getElementById('type');
-  if (zoneField) zoneField.value = zoneValue;
-  if (typeField) typeField.value = typeValue;
-
-  const bookingSection = document.getElementById('booking');
-  if (bookingSection) bookingSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-  const card = document.querySelector('.booking-card');
-  if (card) {
-    card.classList.add('booking-highlight');
-    setTimeout(() => card.classList.remove('booking-highlight'), 1600);
-  }
-  [zoneField, typeField].forEach(field => {
-    const group = field && field.closest('.field-group');
-    if (!group) return;
-    group.classList.add('field-filled');
-    setTimeout(() => group.classList.remove('field-filled'), 1600);
-  });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const dateInput = document.getElementById('date');
-  if(dateInput) {
-    const today = new Date().toISOString().split('T')[0];
-    dateInput.setAttribute('min', today);
-  }
-
-  // Hero slideshow (10 photos) + each zone card's mini slideshow (3 photos).
-  // setupSlideshow only ever cycles through photos that actually loaded,
-  // so one missing/broken file can't freeze the rotation on a blank frame.
-  setupSlideshow(document.querySelector('.hero-slideshow'), '.slide', 5000);
-  document.querySelectorAll('.zone-slideshow').forEach(el => setupSlideshow(el, 'img', 4000));
-
-  // Hero slides 2-10 only start fetching once the browser is idle (or, at
-  // the latest, once the page has finished loading) — so they never compete
-  // with slide 1 (the real LCP image) for early bandwidth/connections.
-  function loadDeferredHeroSlides() {
-    document.querySelectorAll('.hero-slideshow .slide img[data-src]').forEach(img => {
-      img.src = img.getAttribute('data-src');
-      img.removeAttribute('data-src');
-    });
-  }
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(loadDeferredHeroSlides, { timeout: 3000 });
-  } else {
-    window.addEventListener('load', loadDeferredHeroSlides);
-  }
-});
-
-  /* Toast */
-  function showToast(message) {
-    const t = document.getElementById('toast');
-    if (message) document.getElementById('toast-text').textContent = message;
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 3500);
-  }
-
-  function showSuccessModal(channel) {
-    const text = channel === 'email'
-      ? 'We\'ve opened your email app with all your safari details filled in — just hit Send. Once we receive it, our team typically replies within a few hours.'
-      : 'We\'ve opened WhatsApp with all your safari details filled in — just hit Send. Our team typically replies within a few hours.';
-    document.getElementById('successModalText').textContent = text;
-    document.getElementById('successModal').classList.add('show');
-  }
-
-  function closeSuccessModal() {
-    document.getElementById('successModal').classList.remove('show');
-  }
-
-  /* Navbar scroll transparency */
-  const navEl = document.querySelector('.nav');
-  let navIsScrolled = false;
-  function updateNavBg() {
-    const scrolled = window.scrollY > 60;
-    if (scrolled === navIsScrolled) return; // no visual change → skip the style write
-    navIsScrolled = scrolled;
-    navEl.style.background = scrolled ? 'rgba(15,28,16,.97)' : 'rgba(15,28,16,.92)';
-  }
-  window.addEventListener('scroll', updateNavBg, { passive: true });
-  function toggleMenu() {
-  const navLinks = document.querySelector('.nav-links');
-  navLinks.classList.toggle('active');
-}
-function openWhatsApp(e) {
+  <script>
+  /* Left inline and unchanged on purpose — floating WhatsApp button. */
+  function openWhatsApp(e) {
     e.preventDefault();
     const phone = '919536256640';
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent('Hello! I want to enquire about Jim Corbett Safari Booking 2026-27.')}`, '_blank');
   }
-
-  /* Click-to-play YouTube facade: keeps YouTube's player JS out of the
-     page entirely until someone actually wants to watch. */
-  function loadYouTubeFacade(el) {
-    if (el.dataset.loaded) return;
-    el.dataset.loaded = '1';
-    const id = el.getAttribute('data-yt-id');
-    const title = el.getAttribute('data-yt-title') || 'YouTube video';
-    const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
-    iframe.title = title;
-    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-    iframe.allowFullscreen = true;
-    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
-    iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0;';
-    el.innerHTML = '';
-    el.removeAttribute('role');
-    el.removeAttribute('tabindex');
-    el.onclick = null;
-    el.onkeydown = null;
-    el.appendChild(iframe);
-  }
-
-</script>
+  </script>
 </body>
 </html>
